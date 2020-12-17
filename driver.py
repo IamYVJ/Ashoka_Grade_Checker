@@ -235,12 +235,12 @@ def main():
                 received_all_grades = grade_count(grades)
             if not received_all_grades:
                 sleeping()
-        driver.close()
-        server.quit()
         print('All Grades Recevied')
     except:
         pass
     finally:
+        driver.close()
+        server.quit()
         input('Press Enter To Terminate...')
 
 if __name__ == "__main__":
