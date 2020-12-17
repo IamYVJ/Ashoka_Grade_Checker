@@ -52,7 +52,7 @@ def grade_count(grades):
 
 def send_email(course, message):
     global server
-    html = "<p> " + message.replace('\n','<br>') + " <br> <br>Regards,<br> QuadCore Systems<br>[A YVJ Initiative]</p>"
+    html = "<p> " + message.replace('\n','<br>') + " <br> <br>Regards,<br><b>QuadCore Systems</b><br>[A YVJ Initiative]</p>"
     emailMsg = email.mime.multipart.MIMEMultipart('mixed')
     emailMsg['Subject'] = course['name'][:course['name'].find('-')].strip() +' Grade'
     emailMsg['From'] = 'QuadCore Systems'
@@ -122,7 +122,7 @@ def check_grade():
 
 def test_email():
     global server
-    html = "<p> " + 'You Will Receive Ashoka Grade Updates Here' + " <br> <br>Regards,<br> QuadCore Systems<br>[A YVJ Initiative]</p>"
+    html = "<p> " + 'You Will Receive Ashoka Grade Updates Here' + " <br> <br>Regards,<br><b>QuadCore Systems</b><br>[A YVJ Initiative]</p>"
     emailMsg = email.mime.multipart.MIMEMultipart('mixed')
     emailMsg['Subject'] = 'Ashoka Grade Updates'
     emailMsg['From'] = 'QuadCore Systems'
